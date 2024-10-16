@@ -18,8 +18,8 @@
             }
             .custom-marker .vessel-name {
                 position: absolute;
-                top: -25px; /* Adjust this value to position the text */
-                left: -15px; /* Center the text */
+                top: -25px;
+                left: -15px;
                 font-size: 12px;
                 text-align: center;
             }
@@ -45,21 +45,13 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
             
-            // Function to load the map data
-            function loadMapData() {
-                // You can replace this with your own logic to load new data if needed
-                console.log("Map data loading...");
-                location.reload(); // Reload the page to refresh the map
-            }
-
-            // Set an interval for refreshing the map every 5 minutes
+            // Add auto-refresh logic with page reload
             var refreshInterval = setInterval(function() {
                 if (document.getElementById("refresh-toggle").checked) {
-                    loadMapData();
+                    location.reload(); // Reload the page to refresh the map every 5 minutes
                 }
             }, 300000); // 300000 milliseconds = 5 minutes
 
-            // Toggle auto refresh status
             document.getElementById("refresh-toggle").addEventListener("change", function() {
                 var status = document.getElementById("auto-refresh-status");
                 if (this.checked) {
@@ -68,7 +60,6 @@
                 } else {
                     status.textContent = "OFF";
                     status.style.color = "red";
-                    clearInterval(refreshInterval); // Clear the interval if turned off
                 }
             });
     
