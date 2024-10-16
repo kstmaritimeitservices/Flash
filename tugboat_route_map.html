@@ -2,7 +2,7 @@
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Vessel Route Map</title>
+        <title>Vessel Location Map</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -29,7 +29,7 @@
         </style>
     </head>
     <body>
-        <h3>Vessel Route Map</h3>
+        <h3>Vessel Location Map</h3>
         <div id="auto-refresh">
             <label>
                 <input type="checkbox" id="refresh-toggle" checked />
@@ -48,7 +48,7 @@
             
             // Countdown and Auto-Refresh logic
             var countdownElement = document.getElementById("countdown");
-            var timeLeft = 120; // 5 minutes countdown in seconds
+            var timeLeft = 300; // 5 minutes countdown in seconds
 
             var countdownInterval = setInterval(function() {
                 timeLeft--;
