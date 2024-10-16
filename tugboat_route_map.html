@@ -23,34 +23,54 @@
                 font-size: 12px;
                 text-align: center;
             }
+            #auto-refresh {
+                margin: 10px;
+            }
         </style>
     </head>
     <body>
         <h3>Vessel Route Map</h3>
-        <button id="toggle-refresh">Toggle Auto Refresh</button>
+        <div id="auto-refresh">
+            <label>
+                <input type="checkbox" id="refresh-toggle" checked />
+                Auto Refresh: <span id="auto-refresh-status">ON</span>
+            </label>
+        </div>
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
             var map = L.map('map').setView([1.266893287, 103.729881342], 13);
-            var refreshEnabled = false;  // Track refresh status
-
-            // Function to toggle auto refresh
-            function toggleRefresh() {
-                refreshEnabled = !refreshEnabled;
-                document.getElementById('toggle-refresh').innerText = refreshEnabled ? 'Disable Auto Refresh' : 'Enable Auto Refresh';
-                
-                if (refreshEnabled) {
-                    setInterval(() => {
-                        location.reload();  // Reload the page every 5 minutes
-                    }, 300000);  // 5 minutes in milliseconds
-                }
-            }
-
-            document.getElementById('toggle-refresh').addEventListener('click', toggleRefresh);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
+            
+            // Function to load the map data
+            function loadMapData() {
+                // You can replace this with your own logic to load new data if needed
+                console.log("Map data loading...");
+                location.reload(); // Reload the page to refresh the map
+            }
+
+            // Set an interval for refreshing the map every 5 minutes
+            var refreshInterval = setInterval(function() {
+                if (document.getElementById("refresh-toggle").checked) {
+                    loadMapData();
+                }
+            }, 300000); // 300000 milliseconds = 5 minutes
+
+            // Toggle auto refresh status
+            document.getElementById("refresh-toggle").addEventListener("change", function() {
+                var status = document.getElementById("auto-refresh-status");
+                if (this.checked) {
+                    status.textContent = "ON";
+                    status.style.color = "green";
+                } else {
+                    status.textContent = "OFF";
+                    status.style.color = "red";
+                    clearInterval(refreshInterval); // Clear the interval if turned off
+                }
+            });
     
             var customIcon = L.divIcon({
                 className: 'custom-marker',
