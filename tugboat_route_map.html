@@ -30,7 +30,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.26706344175, 103.73002613450001], 13);
+            var map = L.map('map').setView([1.26705162725, 103.7300002055], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -42,8 +42,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.273557367, 103.801117338], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.11 knots<br><b>Time:</b> 20241016 14:41:50')
+            L.marker([1.273510109, 103.801013622], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.05 knots<br><b>Time:</b> 20241016 14:43:46')
                 .openPopup();
         
             var customIcon = L.divIcon({
