@@ -35,22 +35,32 @@
                 <input type="checkbox" id="refresh-toggle" checked />
                 Auto Refresh: <span id="auto-refresh-status">ON</span>
             </label>
+            <div>Next refresh in: <span id="countdown">300</span> seconds</div>
         </div>
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2666260195, 103.7298851495], 13);
+            var map = L.map('map').setView([1.266603407, 103.72985887050001], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
             
-            // Add auto-refresh logic with page reload
-            var refreshInterval = setInterval(function() {
-                if (document.getElementById("refresh-toggle").checked) {
-                    location.reload(); // Reload the page to refresh the map every 5 minutes
+            // Countdown and Auto-Refresh logic
+            var countdownElement = document.getElementById("countdown");
+            var timeLeft = 120; // 5 minutes countdown in seconds
+
+            var countdownInterval = setInterval(function() {
+                timeLeft--;
+                countdownElement.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval); // Stop the countdown
+                    if (document.getElementById("refresh-toggle").checked) {
+                        location.reload(); // Reload the page when countdown reaches zero
+                    }
                 }
-            }, 300000); // 300000 milliseconds = 5 minutes
+            }, 1000); // Decrease timeLeft by 1 every second
 
             document.getElementById("refresh-toggle").addEventListener("change", function() {
                 var status = document.getElementById("auto-refresh-status");
@@ -69,8 +79,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.271807678, 103.800553398], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.44 knots<br><b>Time:</b> 20241016 15:35:49')
+            L.marker([1.271717228, 103.800448282], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.18 knots<br><b>Time:</b> 20241016 15:37:49')
                 .openPopup();
         
             var customIcon = L.divIcon({
