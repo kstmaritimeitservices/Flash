@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2758245499999998, 103.72616464159998], 13);
+            var map = L.map('map').setView([1.2758147308, 103.7261583342], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -79,8 +79,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.273550832, 103.801264134], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.09 knots<br><b>Time:</b> 20241018 04:29:49')
+            L.marker([1.273546745, 103.801260836], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.02 knots<br><b>Time:</b> 20241018 04:31:50')
                 .openPopup();
         
             var customIcon = L.divIcon({
@@ -99,8 +99,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.273487018, 103.801220474], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt<br><b>Speed:</b> 0.18 knots<br><b>Time:</b> 20241018 04:29:42')
+            L.marker([1.273442009, 103.801192235], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt<br><b>Speed:</b> 0.09 knots<br><b>Time:</b> 20241018 04:31:41')
                 .openPopup();
         
             var customIcon = L.divIcon({
