@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2736287016, 103.72046189919999], 13);
+            var map = L.map('map').setView([1.2742611986, 103.7189030646], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -85,12 +85,12 @@
         
             var customIcon = L.divIcon({
                 className: 'custom-marker',
-                html: '<div class="vessel-name" style="font-weight: bold; color: red;"><b>MAJUSOLAR</b></div><img src="boat_icon.png" width="15" height="15" />',
+                html: '<div class="vessel-name" style="font-weight: bold; color: black;"><b>MAJUSOLAR</b></div><img src="boat_icon.png" width="15" height="15" />',
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2908613, 103.7279657], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 9.17 knots<br><b>Time:</b> 20241017 17:32:09')
+            L.marker([1.294574, 103.7192061], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 0.86 knots<br><b>Time:</b> 20241017 17:44:41')
                 .openPopup();
         
             var customIcon = L.divIcon({
@@ -99,8 +99,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2727588, 103.800790408], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt<br><b>Speed:</b> 0.16 knots<br><b>Time:</b> 20241017 17:43:43')
+            L.marker([1.272208585, 103.801755835], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt<br><b>Speed:</b> 4.71 knots<br><b>Time:</b> 20241017 17:45:41')
                 .openPopup();
         
             var customIcon = L.divIcon({
