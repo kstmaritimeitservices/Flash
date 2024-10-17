@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2746099106000002, 103.7193658894], 13);
+            var map = L.map('map').setView([1.2746422506, 103.7192906294], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -89,13 +89,13 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2944327, 103.7223054], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 1.56 knots<br><b>Time:</b> 20241017 15:39:50')
+            L.marker([1.2945944, 103.7219291], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 0.3 knots<br><b>Time:</b> 20241017 15:41:49')
                 .openPopup();
         
             var customIcon = L.divIcon({
                 className: 'custom-marker',
-                html: '<div class="vessel-name" style="font-weight: bold; color: black;"><b>OpenWrt</b></div><img src="boat_icon.png" width="15" height="15" />',
+                html: '<div class="vessel-name" style="font-weight: bold; color: red;"><b>OpenWrt</b></div><img src="boat_icon.png" width="15" height="15" />',
                 iconSize: [30, 30]
             });
 
