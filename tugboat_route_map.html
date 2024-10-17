@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2697029492, 103.72261901280001], 13);
+            var map = L.map('map').setView([1.269659949, 103.72263098379999], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -79,13 +79,13 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.273598272, 103.801228618], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.09 knots<br><b>Time:</b> 20241018 02:54:50')
+            L.marker([1.273550031, 103.801211112], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.02 knots<br><b>Time:</b> 20241018 02:56:50')
                 .openPopup();
         
             var customIcon = L.divIcon({
                 className: 'custom-marker',
-                html: '<div class="vessel-name" style="font-weight: bold; color: black;"><b>MAJUSOLAR</b></div><img src="boat_icon.png" width="15" height="15" />',
+                html: '<div class="vessel-name" style="font-weight: bold; color: red;"><b>MAJUSOLAR</b></div><img src="boat_icon.png" width="15" height="15" />',
                 iconSize: [30, 30]
             });
 
@@ -99,8 +99,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.272769174, 103.800892646], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt<br><b>Speed:</b> 0.04 knots<br><b>Time:</b> 20241018 02:54:42')
+            L.marker([1.272602414, 103.800970007], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt<br><b>Speed:</b> 0.04 knots<br><b>Time:</b> 20241018 02:56:42')
                 .openPopup();
         
             var customIcon = L.divIcon({
