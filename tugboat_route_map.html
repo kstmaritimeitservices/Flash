@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2578607036, 103.73775503759998], 13);
+            var map = L.map('map').setView([1.2578804896000002, 103.73780917899998], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -79,8 +79,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.271202405, 103.80071444], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.44 knots<br><b>Time:</b> 20241018 09:25:50')
+            L.marker([1.271214735, 103.800903147], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> OpenWrt1<br><b>Speed:</b> 0.74 knots<br><b>Time:</b> 20241018 09:33:10')
                 .openPopup();
         
             var customIcon = L.divIcon({
@@ -89,13 +89,13 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2227548, 103.7334355], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 0.14 knots<br><b>Time:</b> 20241018 09:26:50')
+            L.marker([1.2228579, 103.7335163], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 0.21 knots<br><b>Time:</b> 20241018 09:32:50')
                 .openPopup();
         
             var customIcon = L.divIcon({
                 className: 'custom-marker',
-                html: '<div class="vessel-name" style="font-weight: bold; color: black;"><b>OpenWrt</b></div><img src="boat_icon.png" width="15" height="15" />',
+                html: '<div class="vessel-name" style="font-weight: bold; color: red;"><b>OpenWrt</b></div><img src="boat_icon.png" width="15" height="15" />',
                 iconSize: [30, 30]
             });
 
@@ -119,8 +119,8 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2333752, 103.6873542], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJU511<br><b>Speed:</b> 0.09 knots<br><b>Time:</b> 20241018 09:26:50')
+            L.marker([1.2333587, 103.6873554], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJU511<br><b>Speed:</b> 0.01 knots<br><b>Time:</b> 20241018 09:32:50')
                 .openPopup();
         
         </script>
