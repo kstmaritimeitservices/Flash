@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.261019685, 103.703580778], 13);
+            var map = L.map('map').setView([1.261018185, 103.703580353], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -116,11 +116,11 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2669568, 103.6863611], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJULOYALTY<br><b>Speed:</b> 0.05 knots<br><b>Time:</b> 20241021 17:49:10');
+            L.marker([1.2669508, 103.6863594], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJULOYALTY<br><b>Speed:</b> 0.06 knots<br><b>Time:</b> 20241021 17:49:49');
 
             // Add a small red dot at the exact latitude and longitude
-            var redDot = L.circleMarker([1.2669568, 103.6863611], {
+            var redDot = L.circleMarker([1.2669508, 103.6863594], {
                 radius: 2,
                 color: 'red',
                 fillColor: 'red',
