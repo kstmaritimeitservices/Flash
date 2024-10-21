@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2585274367500001, 103.71119764400001], 13);
+            var map = L.map('map').setView([1.25852376875, 103.71119461900001], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -80,11 +80,11 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.304754847, 103.682874376], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> KSTZEN<br><b>Speed:</b> 0.01 knots<br><b>Time:</b> 20241022 03:52:50');
+            L.marker([1.304736875, 103.682860276], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> KSTZEN<br><b>Speed:</b> 0.02 knots<br><b>Time:</b> 20241022 03:54:10');
 
             // Add a small red dot at the exact latitude and longitude
-            var redDot = L.circleMarker([1.304754847, 103.682874376], {
+            var redDot = L.circleMarker([1.304736875, 103.682860276], {
                 radius: 2,
                 color: 'red',
                 fillColor: 'red',
@@ -98,11 +98,11 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2225371, 103.7332889], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 0.07 knots<br><b>Time:</b> 20241022 03:52:48');
+            L.marker([1.2225404, 103.7332909], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJUSOLAR<br><b>Speed:</b> 0.08 knots<br><b>Time:</b> 20241022 03:54:09');
 
             // Add a small red dot at the exact latitude and longitude
-            var redDot = L.circleMarker([1.2225371, 103.7332889], {
+            var redDot = L.circleMarker([1.2225404, 103.7332909], {
                 radius: 2,
                 color: 'red',
                 fillColor: 'red',
