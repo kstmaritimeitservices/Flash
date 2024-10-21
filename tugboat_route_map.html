@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.2365593865000002, 103.69925048900001], 13);
+            var map = L.map('map').setView([1.2365432317499998, 103.69923848624998], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -80,11 +80,11 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.304777046, 103.682821156], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> KSTZEN<br><b>Speed:</b> 0.02 knots<br><b>Time:</b> 20241021 22:27:52');
+            L.marker([1.304715027, 103.682818645], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> KSTZEN<br><b>Speed:</b> 0.06 knots<br><b>Time:</b> 20241021 22:29:10');
 
             // Add a small red dot at the exact latitude and longitude
-            var redDot = L.circleMarker([1.304777046, 103.682821156], {
+            var redDot = L.circleMarker([1.304715027, 103.682818645], {
                 radius: 2,
                 color: 'red',
                 fillColor: 'red',
@@ -116,11 +116,11 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2188415, 103.6550374], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJULOYALTY<br><b>Speed:</b> 0.06 knots<br><b>Time:</b> 20241021 22:27:51');
+            L.marker([1.2188389, 103.6549919], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJULOYALTY<br><b>Speed:</b> 0.08 knots<br><b>Time:</b> 20241021 22:29:09');
 
             // Add a small red dot at the exact latitude and longitude
-            var redDot = L.circleMarker([1.2188415, 103.6550374], {
+            var redDot = L.circleMarker([1.2188389, 103.6549919], {
                 radius: 2,
                 color: 'red',
                 fillColor: 'red',
