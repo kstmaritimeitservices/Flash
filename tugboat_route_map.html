@@ -40,7 +40,7 @@
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
-            var map = L.map('map').setView([1.26525937675, 103.71045343425], 13);
+            var map = L.map('map').setView([1.26525286475, 103.71044910375001], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -80,11 +80,11 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.304707307, 103.682912337], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> KSTZEN<br><b>Speed:</b> 0.05 knots<br><b>Time:</b> 20241021 16:38:09');
+            L.marker([1.304689759, 103.682895215], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> KSTZEN<br><b>Speed:</b> 0.03 knots<br><b>Time:</b> 20241021 16:38:51');
 
             // Add a small red dot at the exact latitude and longitude
-            var redDot = L.circleMarker([1.304707307, 103.682912337], {
+            var redDot = L.circleMarker([1.304689759, 103.682895215], {
                 radius: 2,
                 color: 'red',
                 fillColor: 'red',
@@ -94,7 +94,7 @@
             // Add vessel icon marker with popup
             var customIcon = L.divIcon({
                 className: 'custom-marker',
-                html: '<div class="vessel-name" style="font-weight: bold; color: black;"><b>MAJUSOLAR</b></div><img src="boat_icon.png" width="15" height="15" />',
+                html: '<div class="vessel-name" style="font-weight: bold; color: red;"><b>MAJUSOLAR</b></div><img src="boat_icon.png" width="15" height="15" />',
                 iconSize: [30, 30]
             });
 
@@ -116,11 +116,11 @@
                 iconSize: [30, 30]
             });
 
-            L.marker([1.2669392, 103.6863537], { icon: customIcon }).addTo(map)
-                .bindPopup('<b>Vessel Name:</b> MAJULOYALTY<br><b>Speed:</b> 0.03 knots<br><b>Time:</b> 20241021 16:38:10');
+            L.marker([1.2669307, 103.6863535], { icon: customIcon }).addTo(map)
+                .bindPopup('<b>Vessel Name:</b> MAJULOYALTY<br><b>Speed:</b> 0.03 knots<br><b>Time:</b> 20241021 16:38:51');
 
             // Add a small red dot at the exact latitude and longitude
-            var redDot = L.circleMarker([1.2669392, 103.6863537], {
+            var redDot = L.circleMarker([1.2669307, 103.6863535], {
                 radius: 2,
                 color: 'red',
                 fillColor: 'red',
